@@ -18,7 +18,16 @@ psycopg2 = "^2.9.5"
 drf-nested-routers = "^0.93.4"
 pillow = "^9.4.0"
 django-cors-headers = "^3.13.0"
+django-templated-mail = "^1.1.1"
+celery = "^5.2.7"
+redis = "^4.4.2"
+flower = "^1.2.0"
 
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.2.1"
+pytest-django = "^4.5.2"
+pytest-watch = "^4.2.0"
 
 [build-system]
 requires = ["poetry-core"]
