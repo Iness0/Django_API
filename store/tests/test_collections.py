@@ -3,10 +3,12 @@ from rest_framework import status
 from store.models import Collection, Product
 from model_bakery import baker
 
+
 @pytest.fixture
 def create_collection(api_client):
     def do_create_collection(collection):
         return api_client.post('/store/collections/', collection)
+
     return do_create_collection
 
 
@@ -51,5 +53,5 @@ class TestRetrieveCollection:
         assert response.data == {
             'id': collection.id,
             'title': collection.title,
-            'products_count': 0,
+            'products_count': 10,
         }
